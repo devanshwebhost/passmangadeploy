@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default styles will apply to larger screens (desktops) */
+
+✅ For Tablets (Width: 768px - 1024px)
+@media screen and (max-width: 1024px) {
+    .w-[80%] { width: 95%; } /* Adjust width for smaller screens */
+    .flex { flex-direction: column; align-items: center; } /* Stack elements */
+    .gap-10 { gap: 5px; } /* Reduce spacing */
+    .w-80, .w-60 { width: 90%; } /* Adjust input fields */
+  }
+  
+  /* ✅ For Mobile Screens (Width: 480px - 768px) */
+  @media screen and (max-width: 768px) {
+    .w-[80%] { width: 100%; padding: 10px; } /* Use full width */
+    .text-3xl { font-size: 1.5rem; } /* Reduce title font size */
+    .text-xl { font-size: 1rem; } /* Adjust other text sizes */
+    .flex { flex-direction: column; } /* Stack items vertically */
+    .gap-10 { gap: 10px; } /* Reduce gaps */
+    .w-80, .w-60 { width: 100%; } /* Full width inputs */
+    .mt-10 { margin-top: 5px; } /* Reduce top margins */
+    .p-5 { padding: 10px; } /* Adjust padding */
+  }
+  
+  /* ✅ For Small Mobile Screens (Width: 320px - 480px) */
+  @media screen and (max-width: 480px) {
+    .text-3xl { font-size: 1.2rem; } /* Further reduce heading size */
+    .text-xl { font-size: 0.9rem; } /* Adjust text size */
+    .p-1 { padding: 5px; } /* Reduce padding */
+    .p-5 { padding: 8px; } /* Adjust container padding */
+    .px-4 { padding-left: 10px; padding-right: 10px; } /* Adjust table cell padding */
+    .gap-10 { gap: 5px; } /* Reduce gaps further */
+    .rounded-xl { border-radius: 5px; } /* Reduce rounded corners */
+    .mt-5 { margin-top: 5px; } /* Reduce spacing */
+    .text-center { text-align: center; } /* Center text */
+  }
+  
+  /* ✅ For Ultra Small Screens (Less than 320px) */
+  @media screen and (max-width: 320px) {
+    .text-3xl { font-size: 1rem; } /* Even smaller text */
+    .text-xl { font-size: 0.8rem; }
+    .w-[80%] { width: 100%; padding: 5px; } /* Full width */
+    .p-5 { padding: 5px; } /* Reduce padding */
+    .px-4 { padding: 5px; } /* Adjust table spacing */
+    .flex { flex-direction: column; gap: 5px; } /* Stack elements */
+  }
+/* ✅ General Table Styling *//* ✅ Ensure the table takes full width */
+.main-container {
+    width: 100%; /* Make sure the main container takes full width on small screens */
+    padding: 0 10px; /* Add some padding to prevent overflow */
+  }
+  
+  /* ✅ General Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensure better column distribution */
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  
+  /* ✅ Table Header */
+  thead {
+    background-color: #f8f9fa;
+  }
+  
+  /* ✅ Table Cells */
+  td, th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    font-size: 1rem; /* Default font size */
+  }
+  
+  /* ✅ Make table responsive */
+  @media screen and (max-width: 768px) {
+    .main {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  
+    table {
+      display: block;
+      overflow-x: auto; /* Enable horizontal scroll */
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+  
+    thead {
+      display: none; /* Hide headers */
+    }
+  
+    tbody, tr, td {
+      display: block;
+      width: 100%;
+    }
+  
+    tr {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: #fff;
+    }
+  
+    td {
+      text-align: left;
+      font-size: 0.9rem; /* Reduce font size */
+      padding: 8px;
+      position: relative;
+      border: none;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: #555;
+    }
+  
+    .border {
+      border: none; /* Remove extra borders */
+    }
+  
+    .text-center {
+      text-align: center;
+    }
+    .footer{
+        position: relative;
+    }
+  }
+  
+  /* Table Styling */
+table {
+    width: 90%; /* Table takes 90% width */
+    margin: auto; /* Center the table */
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  
+  /* Table Header */
+  thead {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  /* Table Cells */
+  td, th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    font-size: 1rem; /* Default font size */
+  }
+  
+  /* ✅ Make table responsive */
+  @media screen and (max-width: 768px) {
+    table {
+      width: 100%; /* Keep table at 90% width */
+      display: block;
+      overflow-x: auto; /* Allow horizontal scrolling */
+    }
+  
+    thead {
+      display: table-header-group; /* Keep table headers visible */
+    }
+  
+    tbody {
+      display: table-row-group;
+    }
+  
+    tr {
+      display: table-row;
+    }
+  
+    td, th {
+      display: table-cell;
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+      padding: 8px;
+      border: 1px solid #000 !important;
+    }
+    
+    .tableParent{
+        width: 100%;
+    }
+  }
+  .passMedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+  
