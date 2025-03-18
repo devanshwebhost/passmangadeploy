@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,        // ✅ Frontend port (Backend port se alag rakhein)
-    host: "0.0.0.0"     // 🟢 Render ke liye zaroori hai
+    host: "0.0.0.0",     // 🟢 Render ke liye zaroori hai
     strictPort: true,
     cors: true,
     allowedHosts: ['passmangadev.onrender.com']
