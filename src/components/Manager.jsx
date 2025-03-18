@@ -343,7 +343,7 @@ const deletePassword = async (id) => {
       />
       <div className='bg-purple-500 md:w-[80%] w-[100%] h-auto p-5 rounded-xl main'>
 
-        <div className='header flex flex-col items-center md:p-0 p-2 justify-center py-6'>
+        <div className='header flex flex-col items-center md:p-5 p-2 justify-center py-6'>
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <lord-icon
               src="https://cdn.lordicon.com/maltvyiw.json"
@@ -354,11 +354,11 @@ const deletePassword = async (id) => {
               <span class="ml-3 text-3xl">pAsS</span> <span className='text-gray-800'>MaNgA</span>
             </div>
           </a>
-          <p className='md:text-2xl text-xl text-bold text-gray-900'>Your own password manager for personal use only</p>
+          <p className='md:text-2xl text-xl text-bold text-white'>Your own password manager for personal use only</p>
           <p className='md:text-[15px] text-[10px] text-bold text-gray-900'>(Please refresh if your passwords are not showing or Not showing verified User)</p>
         </div>
         {/* inputs */}
-        <div className='flex justify-center md:flex-row flex-row-reverse items-center gap-10'>
+        <div className='flex justify-center md:flex-row flex-col items-center gap-10'>
           <div className='flex flex-col'>
             <label htmlFor="Name" className='font-bold'>Name</label>
             <input type="text" onChange={handelChange} value={form.name} name="name" className='w-60 p-1 rounded-xl' />
@@ -399,7 +399,7 @@ const deletePassword = async (id) => {
         <div className='flex justify-center items-center mt-10 flex-col'>
           <h2 className='text-white font-semibold md:text-2xl text-xl p-2'>Your Saved Passwords</h2>
           {/*saved passwords */}
-          <div className='text-gray-900 w-[80%] tableParent'>
+          <div className='text-gray-900 md:w-[80%] md:overflow-auto overflow-x-auto w-[100%] tableParent'>
             {/* No saved passwords yet  */}
 
             <table className="w-full border-collapse border border-gray-500">

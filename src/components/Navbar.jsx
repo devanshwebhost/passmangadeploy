@@ -30,7 +30,7 @@ const Navbar = () => {
         </a>
 
         {/* Show username if logged in, otherwise show login button */}
-        <div className="ml-auto flex items-center">
+        <div className="md:ml-auto flex items-center">
           {user ? (
             <>
               <span className="text-green-700 rounded font-bold bg-white px-4 mr-4">Verified User</span>
